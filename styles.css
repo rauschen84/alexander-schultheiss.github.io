@@ -1,0 +1,221 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: DM Sans, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(244, 244, 244);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 140px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.my-name {    
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.nav {    
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 740px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.profile-picture {
+    height: 500px;
+    width: 375px;
+    border-radius: 16px;    
+}
+.info {
+    width: 500px;    
+}
+.info h1 {    
+    margin-bottom: 40px;
+    color: rgba(50, 50, 50, 1);
+    font-size: 2.25rem;
+}
+.info p {
+    text-align: justify;
+}
+
+.h2-line {
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    
+}
+
+.h2-line h2 {
+    margin: 0;
+    padding-right: 10px;    
+    white-space: nowrap; 
+    color: rgba(50, 50, 50, 1);   
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 40px;
+    background-color: rgba(50, 50, 50, 1);
+    
+}
+.project-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    height: 450px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.project-image {
+    width: 440px;
+    height: 225px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.project-image,
+.project h3,
+.project p {
+    margin-bottom: 10px;
+}
+.project p {
+    color: rgba(134, 134, 134, 1);
+}
+.project button {
+    margin-top: 15px;
+    width: 140px;
+    height: 34px;
+    border: none;
+    border-radius: 17px;
+    background-color: rgba(50, 50, 50, 1);
+    color: white;
+    cursor: pointer;
+}
+.contact-box {
+    display: flex;
+    justify-content: start;    
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 50px;
+    height: 150px;
+}
+
+.contact-box div {
+    margin-right: 220px;
+}
+
+
+
+/* Simple responsivness */
+@media only screen and (max-width: 600px) {
+    header {
+        display: flex;
+        align-items: center;        
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .my-name {
+        width: 300px;
+        
+    }
+    .nav {
+        display: none;
+        
+    }
+    #about {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;
+        margin-right: 25px;
+        width: auto;
+    }
+    .info {
+        width: 345px;
+        text-align: justify;
+    }
+    .info h1 {
+        white-space: nowrap;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    .info p {
+        margin-bottom: 20px;
+    }
+    .profile-picture {
+        margin-bottom: 20px;
+        width: 345px;
+        height: 420px;
+        object-fit: cover;
+    }
+    .h2-line {
+        display: flex;
+        align-items: center;
+        width: 345px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }    
+    .h2-line h2 {
+        margin: 0;
+        margin-left: 25px;
+        padding-right: 10px;    
+        white-space: nowrap; 
+        color: rgba(50, 50, 50, 1);   
+    }    
+    .line {
+        flex-grow: 1;
+        height: 1px;
+        margin-left: 40px;
+        background-color: rgba(50, 50, 50, 1);
+        
+    }
+    .project-box {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 345px;
+        margin-bottom: 20px;
+    }
+    .contact-box {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;    
+        margin-top: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 50px;
+        
+    }
+   
+}
