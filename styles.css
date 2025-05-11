@@ -11,68 +11,72 @@ body {
     line-height: 1.6;
     background-color: rgb(244, 244, 244);
 }
+a {
+    text-decoration: none;
+    color: #000;
+}
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 140px;
-    margin-left: 200px;
-    margin-right: 200px;
+    aspect-ratio: 10 / 1;
+    margin-left: 13vw;
+    margin-right: 13vw;    
 }
 .my-name {    
-    font-size: 15px;
-    white-space: nowrap;
+    font-size: 14px;
+    white-space: nowrap;    
 }
 
 .nav {    
-    width: 230px;
+    width: 12vw;
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
-}
-.nav a {
-    text-decoration: none;
-    color: #000;
+    font-size: 14px;    
 }
 
 #about {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 740px;
-    margin-left: 350px;
-    margin-right: 350px;
+    aspect-ratio: 2 / 1;
+    margin-left: 13vw;
+    margin-right: 13vw;    
 }
 
-.profile-picture {
-    height: 500px;
-    width: 375px;
-    border-radius: 16px;    
+.profile-picture {    
+    width: 20vw;
+    aspect-ratio: 3 / 4;
+    margin-left: 3vw;
+    border-radius: 1.1vh;        
 }
 .info {
-    width: 500px;    
+    width: 29.5vw;
+    margin-right: 3vw;         
 }
 .info h1 {    
-    margin-bottom: 40px;
+    margin-bottom: 2vw;
     color: rgba(50, 50, 50, 1);
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 500;
 }
 .info p {
-    text-align: justify;
+    font-size: 15px;
 }
 
 .h2-line {
     display: flex;
     align-items: center;
-    margin-left: 250px;
-    margin-right: 250px;
-    
+    margin-left: 13vw;
+    margin-right: 13vw;
+    margin-top: 2.5vw;    
 }
 
 .h2-line h2 {
+    font-weight: 500;
     margin: 0;
-    padding-right: 10px;    
+    padding-right: 0.5vw;    
     white-space: nowrap; 
     color: rgba(50, 50, 50, 1);   
 }
@@ -80,7 +84,7 @@ header {
 .line {
     flex-grow: 1;
     height: 1px;
-    margin-left: 40px;
+    margin-left: 2.1vw;
     background-color: rgba(50, 50, 50, 1);
     
 }
@@ -88,31 +92,37 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;    
-    height: 450px;
-    margin-left: 250px;
-    margin-right: 250px;
+    aspect-ratio: 2.65 / 1;
+    margin-left: 13vw;
+    margin-right: 13vw;
+    margin-bottom: 4vw;    
 }
 
 .project-image {
-    width: 440px;
-    height: 225px;
-    border-radius: 16px;
+    width: 23vw;
+    aspect-ratio: 4.5 / 3;
+    border-radius: 1.1vh;
     object-fit: cover;
 }
 .project-image,
 .project h3,
 .project p {
-    margin-bottom: 10px;
+    margin-bottom: 0.5vw;    
+}
+.project h3 {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 600;
 }
 .project p {
     color: rgba(134, 134, 134, 1);
+    font-size: 13px;
 }
 .project button {
-    margin-top: 15px;
-    width: 140px;
-    height: 34px;
+    margin-top: 0.75vw;
+    width: 7.5vw;
+    height: 2.1vw;
     border: none;
-    border-radius: 17px;
+    border-radius: 1.05vw;
     background-color: rgba(50, 50, 50, 1);
     color: white;
     cursor: pointer;
@@ -120,15 +130,17 @@ header {
 .contact-box {
     display: flex;
     justify-content: start;    
-    margin-top: 30px;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-bottom: 50px;
-    height: 150px;
+    margin-top: 1.5vw;
+    margin-left: 13vw;
+    margin-right: 13vw;
+    margin-bottom: 2.5vw;
+    aspect-ratio: 10 / 1;    
 }
-
+.contact-p {
+    color: rgba(134, 134, 134, 1);
+}
 .contact-box div {
-    margin-right: 220px;
+    margin-right: 11vw;    
 }
 
 
