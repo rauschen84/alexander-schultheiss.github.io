@@ -70,7 +70,8 @@ header {
     align-items: center;
     margin-left: 13vw;
     margin-right: 13vw;
-    margin-top: 2.5vw;    
+    margin-top: 10vw;
+    margin-bottom: 3vw;    
 }
 
 .h2-line h2 {
@@ -118,11 +119,11 @@ header {
     font-size: 13px;
 }
 .project button {
-    margin-top: 0.75vw;
-    width: 7.5vw;
-    height: 2.1vw;
+    font-size: 13px;
+    padding: 14px 20px;
+    margin-top: 0.75vw;    
     border: none;
-    border-radius: 1.05vw;
+    border-radius: 22px;
     background-color: rgba(50, 50, 50, 1);
     color: white;
     cursor: pointer;
