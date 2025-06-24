@@ -1,26 +1,33 @@
-// DARK MODE TOGGLE (with localStorage and system preference fallback)
-const setTheme = (theme) => {
-    document.body.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
-};
+// DARK MODE TOGGLE (with localStorage, system preference fallback, and visual feedback)
+const toggleButton = document.getElementById("theme-toggle");
 
-const initTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setTheme(prefersDark ? 'dark' : 'light');
+const updateToggleIcon = (theme) => {
+    if (toggleButton) {
+        toggleButton.textContent = theme === "dark" ? "🌞 Light Mode" : "🌙 Dark Mode";
+        toggleButton.setAttribute("aria-pressed", theme === "dark");
     }
 };
 
-document.getElementById("theme-toggle").addEventListener("click", () => {
-    const newTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-});
+const setTheme = (theme) => {
+    document.body.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+    updateToggleIcon(theme);
+};
+
+const initTheme = () => {
+    const savedTheme = localStorage.getItem("theme");
+    const initialTheme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(initialTheme);
+};
+
+if (toggleButton) {
+    toggleButton.addEventListener("click", () => {
+        const newTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+        setTheme(newTheme);
+    });
+}
 
 initTheme();
-
 
 // INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
 const fadeInElements = document.querySelectorAll("section, .project");
@@ -41,7 +48,7 @@ fadeInElements.forEach(el => {
     observer.observe(el);
 });
 
-// OPTIONAL: Improve anchor scroll behavior if needed (offset fix)
+// ANCHOR SCROLL OFFSET FIX
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
